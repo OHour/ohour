@@ -10,7 +10,7 @@ const Container = (props) => (
   <div>
     {props.children}
   </div>
-)
+);
 
 class App extends Component {
   render() {
@@ -18,9 +18,9 @@ class App extends Component {
       <Router history={browserHistory}>
         <Route path='/' component={Container}>
           <IndexRoute component={Home} />
-          <Route path='/student-login' component={StudentLogin} />
-          <Route path='/queue' component={Queue} />
           <Route path='/professor-dashboard' component={ProfessorDashboard} />
+          <Route path='/queue' component={Queue} />
+          <Route path='/student-login' component={StudentLogin} />
           <Route path='*' component={RouteNotFound} />
         </Route>
       </Router>

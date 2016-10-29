@@ -1,7 +1,3 @@
-// babel registry
-
-
-
 require('babel-register')({
   presets: ['es2015', 'react']
   // ignore: false

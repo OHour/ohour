@@ -1,5 +1,3 @@
-//students go to student login page
-//professor goes to professor dashboard
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
 

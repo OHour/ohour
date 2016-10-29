@@ -1,10 +1,3 @@
-// create a form component
-// are  you a student? or professor? redirect accordingly
-//students go to student login page
-//professor goes to professor login page
-
-//if there is no active session, redirect to no office hours
-
 import React, { Component } from 'react';
 import { browserHistory } from 'react-router'
 
@@ -19,15 +12,15 @@ class StudentLogin extends Component {
     const email = event.target.elements[0].value;
     const password = event.target.elements[1].value;
 
-    // Needs sever-side implementation
-    fetch('/submit', {
-      method: 'post',
-      body: JSON.stringify({ email, password }),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    }).then(() => browserHistory.push('/queue'))
-      .catch(() => browserHistory.push('*'));
+    // Needs server-side implementation
+    // fetch('/submit', {
+    //   method: 'post',
+    //   body: JSON.stringify({ email, password }),
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json'
+    //   })
+    // }).then(() => browserHistory.push('/queue'))
+    //   .catch(() => browserHistory.push('*'));
   }
 
   render() {

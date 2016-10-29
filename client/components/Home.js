@@ -1,13 +1,15 @@
 //students go to student login page
 //professor goes to professor dashboard
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router'
 
 const Home = () => {
   return (
     <div>
-      <h1>Are you a professor or student?</h1>
-      <button className="btn btn-primary btn-block">Login</button>
-      <button className="btn btn-primary btn-block">Login</button>
+      <button className="btn btn-primary btn-block" onClick={() => browserHistory.push('/queue')}>
+      Student Login</button>
+      <button className="btn btn-primary btn-block" onClick={() => browserHistory.push('/professor-dashboard')}>
+      Professor Login</button>
     </div>
   )
 }

@@ -6,16 +6,8 @@ import Queue from './components/Queue'
 import RouteNotFound from './components/RouteNotFound'
 import StudentLogin from './components/StudentLogin'
 
-const Nav = () => (
-  <div>
-    <Link to='/student-login'>Student Login</Link>&nbsp;
-    <Link to='/professor-login'>Professor Login</Link>
-  </div>
-)
-
 const Container = (props) => (
   <div>
-    <Nav />
     {props.children}
   </div>
 )
@@ -28,6 +20,7 @@ class App extends Component {
           <IndexRoute component={Home} />
           <Route path='/student-login' component={StudentLogin} />
           <Route path='/queue' component={Queue} />
+          <Route path='/professor-dashboard' component={ProfessorDashboard} />
           <Route path='*' component={RouteNotFound} />
         </Route>
       </Router>

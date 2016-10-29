@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "export NODE_ENV=test && mocha --timeout 8000 test/index.js --reporter nyan",
     "start": "webpack-dev-server",
     "server": "nodemon ./server/server.js"
   },
@@ -36,14 +36,18 @@
     "babel-register": "^6.18.0",
     "bcryptjs": "^2.3.0",
     "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "chai-enzyme": "^0.5.2",
     "cheerio": "^0.22.0",
     "cookie-parser": "^1.4.3",
     "enzyme": "^2.5.1",
+    "expect": "^1.20.2",
     "mocha": "^3.1.2",
     "mysql": "^2.11.1",
     "nodemon": "^1.11.0",
     "pg": "^6.1.0",
     "pg-hstore": "^2.3.2",
+    "react-addons-test-utils": "^15.3.2",
     "sequelize": "^3.24.6",
     "sinon": "^1.17.6",
     "webpack": "^1.13.3",

@@ -1,8 +1,7 @@
-//create a class (add/delete students)
-//create office hour event also delete
-
 import React, { Component } from 'react';
 
+// Renders a form to create and delete office hours
+// Location and time are sent to database for students to see on queue page
 const ProfessorDashboard = () => {
 
   function createOfficeHours(event) {
@@ -10,7 +9,7 @@ const ProfessorDashboard = () => {
     const location = event.target.elements[0].value;
     const time = event.target.elements[1].value;
 
-    // Needs server-side implementation
+    // // Needs server-side implementation
     // fetch('/update-office-hours', {
     //   method: 'post',
     //   body: JSON.stringify({ location, time }),
@@ -22,7 +21,7 @@ const ProfessorDashboard = () => {
   }
 
   function deleteOfficeHours() {
-    // Needs server-side implementation
+    // // Needs server-side implementation
     // fetch('/update-office-hours', {
     //   method: 'post',
     //   body: JSON.stringify({ location: null, time: null }),
@@ -34,20 +33,20 @@ const ProfessorDashboard = () => {
   }
 
   return (
-    <div>
+    <div id="professor-dashboard">
       <form onSubmit={createOfficeHours}>
         <div className="form-group">
-          <input type="text" name="location" className="form-control" placeholder="Office Hours Location"></input>
+          <input id="location" type="text" name="location" className="form-control" placeholder="Location"></input>
         </div>
           
         <div className="form-group">
-          <input type="text" name="time" className="form-control" placeholder="Time"></input>
+          <input id="time" type="text" name="time" className="form-control" placeholder="Time"></input>
         </div>
           
-        <button type="submit" className="btn btn-primary">Add Office Hours</button>
+        <button id="submit" type="submit" className="btn btn-primary">Add Office Hours</button>
       </form>
       
-      <button className="btn btn-primary btn-block" onClick={() => deleteOfficeHours}>End Office Hours</button>
+      <button id='delete' className="btn btn-primary btn-block" onClick={() => deleteOfficeHours}>End Office Hours</button>
     </div>
   )
 }

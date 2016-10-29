@@ -22,28 +22,29 @@ class Queue extends Component {
     const student = { name, id: queueId++ }
     QList.push(student);
 
-    // fetch('/studentData', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Accept': 'application/json',
-    //     'Content-Type': 'application/json'
-    //   },
-    //   body: JSON.stringify(student)
-    // }).then(response => response.json())
-    // .catch(err => console.log(err))
+    // Needs server-side implementation
+    fetch('/studentData', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(student)
+    }).then(response => response.json())
+    .catch(err => console.log(err))
 
     this.setState({queueList: QList});
   }
 
-const Queue = () => {
-  function 
-  return (
-    <div>
-      <h1>Welcome to the Q!</h1>
-      <button onClick={() => }Add me to the Q</button>
-      <button>Remove me from the Q</button>
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        <h1>Welcome to the Q!</h1>
+        <button onClick={() => this.addToQ}>Add me to the Q</button>
+        <button>Remove me from the Q</button>
+      </div>
+    )
+  }  
 }
 
 export default Queue

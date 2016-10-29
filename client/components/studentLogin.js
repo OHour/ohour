@@ -12,15 +12,15 @@ class StudentLogin extends Component {
     const email = event.target.elements[0].value;
     const password = event.target.elements[1].value;
 
-    // Needs server-side implementation
-    // fetch('/submit', {
-    //   method: 'post',
-    //   body: JSON.stringify({ email, password }),
-    //   headers: new Headers({
-    //     'Content-Type': 'application/json'
-    //   })
-    // }).then(() => browserHistory.push('/queue'))
-    //   .catch(() => browserHistory.push('*'));
+    // Needs sever-side implementation
+    fetch('/submit', {
+      method: 'post',
+      body: JSON.stringify({ email, password }),
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    }).then(() => browserHistory.push('/queue'))
+      .catch(() => browserHistory.push('*'));
   }
 
   render() {

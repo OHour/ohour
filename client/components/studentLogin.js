@@ -13,14 +13,14 @@ class StudentLogin extends Component {
     const password = event.target.elements[1].value;
 
     // Needs sever-side implementation
-    fetch('/submit', {
-      method: 'post',
-      body: JSON.stringify({ email, password }),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    }).then(() => browserHistory.push('/queue'))
-      .catch(() => browserHistory.push('*'));
+    // fetch('/submit', {
+    //   method: 'post',
+    //   body: JSON.stringify({ email, password }),
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json'
+    //   })
+    // }).then(() => browserHistory.push('/queue'))
+    //   .catch(() => browserHistory.push('*'));
   }
 
   render() {

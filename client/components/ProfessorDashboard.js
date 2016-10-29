@@ -11,26 +11,26 @@ const ProfessorDashboard = () => {
     const time = event.target.elements[1].value;
 
     // Needs server-side implementation
-    fetch('/update-office-hours', {
-      method: 'post',
-      body: JSON.stringify({ location, time }),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    }).then(() => { // update queue with new location and time
-    }).catch(() => browserHistory.push('*'));
+    // fetch('/update-office-hours', {
+    //   method: 'post',
+    //   body: JSON.stringify({ location, time }),
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json'
+    //   })
+    // }).then(() => { // update queue with new location and time
+    // }).catch(() => browserHistory.push('*'));
   }
 
   function deleteOfficeHours() {
     // Needs server-side implementation
-    fetch('/update-office-hours', {
-      method: 'post',
-      body: JSON.stringify({ location: null, time: null }),
-      headers: new Headers({
-        'Content-Type': 'application/json'
-      })
-    }).then(() => { // update queue with new location and time
-    }).catch(() => browserHistory.push('*'));
+    // fetch('/update-office-hours', {
+    //   method: 'post',
+    //   body: JSON.stringify({ location: null, time: null }),
+    //   headers: new Headers({
+    //     'Content-Type': 'application/json'
+    //   })
+    // }).then(() => { // update queue with new location and time
+    // }).catch(() => browserHistory.push('*'));
   }
 
   return (

@@ -13,4 +13,4 @@ const add = (req, res) => {
 	})
 }
 
-export default
+export default add

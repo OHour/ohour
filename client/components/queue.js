@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Student from './Student'
 
 // Track state with student objects containing name and Id
-let queueList = [{name: 'Anonymous', id: 1 }, {name: 'Anonymous', id: 2 }];
-let queueId = 0;
+let queueList = [{name: 'Anonymous', id: 0 }, {name: 'Anonymous', id: 1 }];
+let queueId = 2;
 
 // Renders buttons for student to add and remove themselves from queue
 class Queue extends Component {
@@ -37,8 +37,9 @@ class Queue extends Component {
 
   removeFromQ() {
     queueList.pop(); // needs to be modified if extra students show up
+    --queueId;
 
-    this.setState({queueListState: queueList});
+    this.setState({ queueListState: queueList });
   }
 
   // Upon pageload, set state to current list of students in queue
@@ -63,9 +64,11 @@ class Queue extends Component {
     return (
       <div id="queue">
         <h1>Welcome to the Q!</h1>
+        <h2>Location: Codesmith React Room</h2>
+        <h2>Time: 5:00 - 6:00</h2>
+        <button id="add-to-queue" className="btn-success" onClick={() => this.addToQ("You're 3rd in line!")}>I'm here, add me!</button>
+        <button id="remove-from-queue" className="btn-primary" onClick={this.removeFromQ}>I'm leaving, see you later!</button>
         <ul>{queue}</ul>
-        <button id="add-to-queue" onClick={() => this.addToQ('doug')}>Add me to the Q</button>
-        <button id="remove-from-queue">Remove me from the Q</button>
       </div>
     )
   }
